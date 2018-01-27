@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "987234241002",
+    "project_id": "learnai-193008"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:987234241002:android:820e51143be2b70f",
+        "android_client_info": {
+          "package_name": "com.example.gauthama.learnai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "987234241002-u41d0a0c3horosd1lmgk71bbe1v1utv3.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "987234241002-b2tn66hghm1ff3tftvvo83vavrojij0s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gauthama.learnai",
+            "certificate_hash": "e2b1a957cf7080461e56503d2632ce052fffd310"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBM5CGcirv5fDAJo3FCuznED6ATmD7ghY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

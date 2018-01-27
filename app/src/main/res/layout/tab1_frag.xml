@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/Pic"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/kalam" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:text="APJ Abdul Kalam" />
+
+    <Button
+        android:id="@+id/vr"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/dis"
+        android:layout_marginTop="24dp"
+        android:text="Download AR" />
+
+    <Button
+        android:id="@+id/pdf"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Download PDF"
+        android:layout_alignBaseline="@+id/vr"
+        android:layout_alignBottom="@+id/vr"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/normal"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:text="Normal Chat"
+        android:layout_alignBaseline="@+id/pdf"
+        android:layout_alignBottom="@+id/pdf"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/dis"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/name"
+        android:text="APJ Abdul Kalam - A Teacher, Former President, Scientist, Backbone for Agricultural growth, Inspiration for billions, Global Leader, Rolemodel for youngsters, Defending the Nation, The Pride of India,Project director of India’s first SLV, Key member of Indian Nuclear Program, Served DRDO for 4 decades, Major role in Pokhran 2 test, Developer of ballistic Missiles, Inventor of Kalam stent, Founder of Agni and Prithvi missiles, Peace wisher, Mission 2020." />
+</RelativeLayout>
