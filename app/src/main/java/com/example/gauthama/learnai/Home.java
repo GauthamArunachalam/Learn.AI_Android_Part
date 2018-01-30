@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("User",MODE_PRIVATE);
 
         String name = sharedPreferences.getString("name","");
-        String photourl = sharedPreferences.getString("email","");
+        String photourl = sharedPreferences.getString("photourl","");
 
 
 
@@ -79,7 +79,10 @@ public class Home extends AppCompatActivity {
 
 
         profileName.setText(name);
-        Glide.with(this).load(new File(photourl)).diskCacheStrategy(DiskCacheStrategy.ALL).into(profilePic);
+
+        Glide.with(this).load(photourl).into(profilePic);
+
+        System.out.println("PIC URl "+ photourl);
 
         signOut.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -26,6 +26,7 @@ dependencies {
     })
 
 
+
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.android.gms:play-services-auth:9.8.0'
@@ -37,6 +38,8 @@ dependencies {
     compile 'com.amazonaws:aws-android-sdk-ddb:2.2.+'
     compile 'com.amazonaws:aws-android-sdk-ddb-mapper:2.2.+'
     compile 'com.amazonaws:aws-android-sdk-cognito:2.2.+'
+    compile 'com.github.barteksc:android-pdf-viewer:2.4.0'
+    compile 'ai.api:sdk:2.0.7@aar'
+    compile 'ai.api:libai:1.6.12'
     testCompile 'junit:junit:4.12'
-
 }

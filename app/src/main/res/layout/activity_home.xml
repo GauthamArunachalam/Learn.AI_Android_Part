@@ -9,23 +9,23 @@
 
     <ImageView
         android:id="@+id/profile_pic"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="18dp"
-        app:srcCompat="@drawable/logo"
-        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/ProfileName"
-        android:layout_width="300dp"
-        android:layout_height="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:text="TextView"
-        android:textSize="25dp"
-        android:layout_alignBottom="@+id/profile_pic"
-        android:layout_toRightOf="@+id/profile_pic"
-        android:layout_toEndOf="@+id/profile_pic" />
+        android:textSize="22sp"
+        android:layout_above="@+id/Avai"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp" />
 
     <Button
         android:id="@+id/signout"
@@ -33,10 +33,10 @@
         android:layout_height="wrap_content"
         android:background="@android:color/holo_blue_bright"
         android:text="Sign OUt"
-        android:layout_below="@+id/profile_pic"
+        android:layout_alignBaseline="@+id/Avai"
+        android:layout_alignBottom="@+id/Avai"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="30dp" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/Avai"
@@ -44,18 +44,18 @@
         android:layout_height="40dp"
         android:text="Available Courses"
         android:textSize="20dp"
-        android:layout_below="@+id/signout"
-        android:layout_alignLeft="@+id/profile_pic"
-        android:layout_alignStart="@+id/profile_pic" />
+        android:layout_above="@+id/listview"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 
         <ListView
             android:id="@+id/listview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/Avai" />
+            android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
