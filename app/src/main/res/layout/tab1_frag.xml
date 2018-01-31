@@ -8,19 +8,19 @@
     <ImageView
         android:id="@+id/Pic"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="150dp"
         app:srcCompat="@drawable/kalam" />
 
     <TextView
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
         android:textSize="25sp"
         android:textAlignment="center"
-        android:text="APJ Abdul Kalam" />
+        android:text="APJ Abdul Kalam"
+        android:layout_below="@+id/Pic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/vr"
@@ -59,4 +59,13 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/name"
         android:text="APJ Abdul Kalam - A Teacher, Former President, Scientist, Backbone for Agricultural growth, Inspiration for billions, Global Leader, Rolemodel for youngsters, Defending the Nation, The Pride of India,Project director of India’s first SLV, Key member of Indian Nuclear Program, Served DRDO for 4 decades, Major role in Pokhran 2 test, Developer of ballistic Missiles, Inventor of Kalam stent, Founder of Agni and Prithvi missiles, Peace wisher, Mission 2020." />
+
+    <Button
+        android:id="@+id/forum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pdf"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Forum" />
 </RelativeLayout>

@@ -34,7 +34,7 @@ public class Tab1_frag extends Fragment {
 
     ImageView img;
     TextView name, dis;
-    Button vr, pdf, normal;
+    Button vr, pdf, normal,forum;
     File fileToDownload = new File("/storage/sdcard0/Trail/MY");
     AmazonS3 s3;
     TransferUtility transferUtility;
@@ -51,6 +51,8 @@ public class Tab1_frag extends Fragment {
         vr = (Button)view.findViewById(R.id.vr);
         pdf = (Button)view.findViewById(R.id.pdf);
         normal = (Button)view.findViewById(R.id.normal);
+        forum = (Button)view.findViewById(R.id.forum);
+
 
 
         pdf.setOnClickListener(new View.OnClickListener() {
@@ -71,13 +73,15 @@ public class Tab1_frag extends Fragment {
             }
         });
 
+//        forum.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent i = new Intent(getContext(), forum.class);
+//                startActivity(i);
+//            }
+//        });
+
         return view;
     }
-
-
-
-
-
-
 
 }

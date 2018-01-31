@@ -48,7 +48,7 @@ import java.util.Random;
 public class Tab2_frag extends Fragment {
     private static final String TAG = "Tab1Fragement";
 
-    Button quiz, check, next;
+    Button quiz, check, next,back;
     View exview;
     TextView questionTitle, question, ans;
     RadioGroup rg;
@@ -76,12 +76,14 @@ public class Tab2_frag extends Fragment {
         rb4 = (RadioButton)view.findViewById(R.id.rbutton4);
         ans = (TextView)view.findViewById(R.id.ans);
         rg = (RadioGroup)view.findViewById(R.id.rbgroup);
+        back = (Button)view.findViewById(R.id.back);
 
         check.setVisibility(view.INVISIBLE);
         next.setVisibility(view.INVISIBLE);
         questionTitle.setVisibility(view.INVISIBLE);
         question.setVisibility(view.INVISIBLE);
         rg.setVisibility(view.INVISIBLE);
+        back.setVisibility(view.INVISIBLE);
 
         credentialsProvider = new CognitoCachingCredentialsProvider(
                 getActivity(),
@@ -150,6 +152,7 @@ public class Tab2_frag extends Fragment {
                   if (ans.getText().equals("Correct")) {
                       check.setVisibility(view.INVISIBLE);
                       next.setVisibility(view.VISIBLE);
+
                   }
               }
 
@@ -157,13 +160,22 @@ public class Tab2_frag extends Fragment {
             }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(),Home.class);
+                startActivity(i);
+            }
+        });
+
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(pos<4) {
+                if(pos<19) {
                     pos = pos + 1;
                     select(pos);
                     check.setVisibility(view.VISIBLE);
+                    next.setVisibility(view.INVISIBLE);
                     ans.setBackgroundColor(Color.WHITE);
                     ans.setText("");
                     rb1.setChecked(false);
@@ -172,17 +184,13 @@ public class Tab2_frag extends Fragment {
                     rb4.setChecked(false);
                 }
                 else{
-                    Intent i = new Intent(getContext(),Home.class);
-                    startActivity(i);
-//                    AlertDialog.Builder builder1=new AlertDialog.Builder(getContext().getApplicationContext());
-//                    builder1.setMessage("Congratulations You Finshed the Quiz");
-//                    builder1.setNeutralButton("OK",new DialogInterface.OnClickListener() {
-//                        @Override
-//                        public void onClick(DialogInterface dialog, int which) {
-//
-//                            builder1.show();
-//                        }
-//                    });
+
+                    rg.setVisibility(view.INVISIBLE);
+                    question.setText("Congratulations you Completed the Quiz!!!!");
+                    next.setVisibility(view.INVISIBLE);
+                    check.setVisibility(view.INVISIBLE);
+                    back.setVisibility(view.VISIBLE);
+                    ans.setVisibility(view.INVISIBLE);
                 }
             }
         });

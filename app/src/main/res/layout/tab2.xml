@@ -108,4 +108,15 @@
         android:textSize="15sp"
         android:layout_marginBottom="17dp" />
 
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:text="Back"
+        android:layout_above="@+id/next"
+        android:layout_toRightOf="@+id/ans"
+        android:layout_toEndOf="@+id/ans" />
+
 </RelativeLayout>

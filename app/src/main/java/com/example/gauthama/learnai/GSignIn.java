@@ -67,6 +67,7 @@ public class GSignIn extends AppCompatActivity implements GoogleApiClient.OnConn
             String mail = account.getEmail();
             String url = account.getPhotoUrl().toString();
             System.out.println("google pic url"+ url);
+
             SharedPreferences sharedPreferences = getSharedPreferences( "User", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
             editor.putString("name",name);
@@ -103,7 +104,6 @@ public class GSignIn extends AppCompatActivity implements GoogleApiClient.OnConn
 
 
         GoogleSignInOptions signInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this,this).addApi(Auth.GOOGLE_SIGN_IN_API,signInOptions).build();
 
         SharedPreferences sharedPreferences = getSharedPreferences( "User", MODE_PRIVATE);
