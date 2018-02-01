@@ -80,8 +80,12 @@ public class Home extends AppCompatActivity {
 
         profileName.setText(name);
 
-        Glide.with(this).load(photourl).into(profilePic);
 
+        if(photourl!="") {
+            Glide.with(this).load(photourl).into(profilePic);
+        }else{
+            profilePic.setImageResource(R.drawable.logo);
+        }
         System.out.println("PIC URl "+ photourl);
 
         signOut.setOnClickListener(new View.OnClickListener() {

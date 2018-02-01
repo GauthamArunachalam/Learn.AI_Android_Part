@@ -62,10 +62,14 @@ public class GSignIn extends AppCompatActivity implements GoogleApiClient.OnConn
         if(requestCode == ReqCode){
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
             GoogleSignInAccount account = result.getSignInAccount();
-
+            String url;
             String name = account.getDisplayName().replace(" ","");
             String mail = account.getEmail();
-            String url = account.getPhotoUrl().toString();
+            if(account.getPhotoUrl() != null) {
+                url = account.getPhotoUrl().toString();
+            }else{
+                url = "";
+            }
             System.out.println("google pic url"+ url);
 
             SharedPreferences sharedPreferences = getSharedPreferences( "User", MODE_PRIVATE);

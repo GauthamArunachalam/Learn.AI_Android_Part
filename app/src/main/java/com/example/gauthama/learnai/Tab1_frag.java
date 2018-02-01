@@ -51,7 +51,7 @@ public class Tab1_frag extends Fragment {
         vr = (Button)view.findViewById(R.id.vr);
         pdf = (Button)view.findViewById(R.id.pdf);
         normal = (Button)view.findViewById(R.id.normal);
-        forum = (Button)view.findViewById(R.id.forum);
+      //  forum = (Button)view.findViewById(R.id.forum);
 
 
 

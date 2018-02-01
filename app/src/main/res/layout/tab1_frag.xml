@@ -60,12 +60,4 @@
         android:layout_below="@+id/name"
         android:text="APJ Abdul Kalam - A Teacher, Former President, Scientist, Backbone for Agricultural growth, Inspiration for billions, Global Leader, Rolemodel for youngsters, Defending the Nation, The Pride of India,Project director of India’s first SLV, Key member of Indian Nuclear Program, Served DRDO for 4 decades, Major role in Pokhran 2 test, Developer of ballistic Missiles, Inventor of Kalam stent, Founder of Agni and Prithvi missiles, Peace wisher, Mission 2020." />
 
-    <Button
-        android:id="@+id/forum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pdf"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Forum" />
 </RelativeLayout>
