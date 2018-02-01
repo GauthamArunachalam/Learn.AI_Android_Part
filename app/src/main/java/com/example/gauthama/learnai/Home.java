@@ -41,7 +41,7 @@ public class Home extends AppCompatActivity {
     AmazonDynamoDBClient ddb;
     ListView listView;
     CognitoCachingCredentialsProvider credentialsProvider;
-    Button signOut;
+    TextView signOut,mail;
 
 
     String username, email, photourl;
@@ -53,12 +53,13 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.home2);
 
         SharedPreferences sharedPreferences = getSharedPreferences("User",MODE_PRIVATE);
 
         String name = sharedPreferences.getString("name","");
         String photourl = sharedPreferences.getString("photourl","");
+        String usermail = sharedPreferences.getString("email","");
 
 
 
@@ -70,15 +71,17 @@ public class Home extends AppCompatActivity {
 
        // new RetrieveItem_Task().execute();
 
-        profilePic =(ImageView)findViewById(R.id.profile_pic);
-        profileName=(TextView)findViewById(R.id.ProfileName);
-        signOut = (Button)findViewById(R.id.signout);
+        profilePic =(ImageView)findViewById(R.id.user_profile_photo);
+        profileName=(TextView)findViewById(R.id.user_profile_name);
+        signOut = (TextView)findViewById(R.id.signout);
+        mail = (TextView)findViewById(R.id.user_profile_short_bio);
         listView = (ListView)findViewById(R.id.listview);
 
 
 
 
         profileName.setText(name);
+        mail.setText(usermail);
 
 
         if(photourl!="") {

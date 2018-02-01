@@ -48,7 +48,8 @@ import java.util.Random;
 public class Tab2_frag extends Fragment {
     private static final String TAG = "Tab1Fragement";
 
-    Button quiz, check, next,back;
+    TextView check, next,back;
+    ImageView quiz;
     View exview;
     TextView questionTitle, question, ans;
     RadioGroup rg;
@@ -58,6 +59,7 @@ public class Tab2_frag extends Fragment {
     List<Map<String, AttributeValue>> bow;
     String ques, opt1, opt2, opt3, opt4, answer;
     int pos =0;
+    View v1,v2,v3,v4,v5,v6;
 
 
     @Nullable
@@ -65,9 +67,9 @@ public class Tab2_frag extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.tab2, container, false);
         exview = view;
-        quiz = (Button) view.findViewById(R.id.quiz);
-        check = (Button)view.findViewById(R.id.check);
-        next = (Button)view.findViewById(R.id.next);
+        quiz = (ImageView) view.findViewById(R.id.quiz);
+        check = (TextView) view.findViewById(R.id.check);
+        next = (TextView) view.findViewById(R.id.next);
         questionTitle = (TextView)view.findViewById(R.id.questionTitle);
         question = (TextView)view.findViewById(R.id.question);
         rb1 = (RadioButton)view.findViewById(R.id.rbutton1);
@@ -76,7 +78,14 @@ public class Tab2_frag extends Fragment {
         rb4 = (RadioButton)view.findViewById(R.id.rbutton4);
         ans = (TextView)view.findViewById(R.id.ans);
         rg = (RadioGroup)view.findViewById(R.id.rbgroup);
-        back = (Button)view.findViewById(R.id.back);
+        back = (TextView) view.findViewById(R.id.back);
+        v1 = (View)view.findViewById(R.id.v1);
+        v2 = (View)view.findViewById(R.id.v2);
+        v3 = (View)view.findViewById(R.id.v3);
+        v4 = (View)view.findViewById(R.id.v4);
+        v5 = (View)view.findViewById(R.id.v5);
+        v6 = (View)view.findViewById(R.id.v6);
+
 
         check.setVisibility(view.INVISIBLE);
         next.setVisibility(view.INVISIBLE);
@@ -84,6 +93,12 @@ public class Tab2_frag extends Fragment {
         question.setVisibility(view.INVISIBLE);
         rg.setVisibility(view.INVISIBLE);
         back.setVisibility(view.INVISIBLE);
+        v1.setVisibility(view.INVISIBLE);
+        v2.setVisibility(view.INVISIBLE);
+        v3.setVisibility(view.INVISIBLE);
+        v4.setVisibility(view.INVISIBLE);
+        v5.setVisibility(view.INVISIBLE);
+        v6.setVisibility(view.INVISIBLE);
 
         credentialsProvider = new CognitoCachingCredentialsProvider(
                 getActivity(),
@@ -105,12 +120,24 @@ public class Tab2_frag extends Fragment {
                     e.printStackTrace();
                 }
                 check.setVisibility(view.VISIBLE);
-               // next.setVisibility(view.VISIBLE);
+                next.setVisibility(view.VISIBLE);
                 questionTitle.setVisibility(view.VISIBLE);
                 question.setVisibility(view.VISIBLE);
                 rg.setVisibility(view.VISIBLE);
+                back.setVisibility(view.VISIBLE);
+                v1.setVisibility(view.VISIBLE);
+                v2.setVisibility(view.VISIBLE);
+                v3.setVisibility(view.VISIBLE);
+                v4.setVisibility(view.VISIBLE);
+                v5.setVisibility(view.VISIBLE);
+                v6.setVisibility(view.VISIBLE);
+
 
                 quiz.setVisibility(view.INVISIBLE);
+
+                next.setEnabled(false);
+                back.setEnabled(false);
+
 
 
                 select(pos);
@@ -143,15 +170,15 @@ public class Tab2_frag extends Fragment {
 
                   if (sel.equals(answer)) {
                       ans.setText("Correct");
-                      ans.setBackgroundColor(Color.GREEN);
+                      ans.setTextColor(Color.GREEN);
                   } else {
                       ans.setText("Wrong");
-                      ans.setBackgroundColor(Color.RED);
+                      ans.setTextColor(Color.RED);
                   }
 
                   if (ans.getText().equals("Correct")) {
-                      check.setVisibility(view.INVISIBLE);
-                      next.setVisibility(view.VISIBLE);
+                      check.setEnabled(false);
+                      next.setEnabled(true);
 
                   }
               }
@@ -174,9 +201,9 @@ public class Tab2_frag extends Fragment {
                 if(pos<19) {
                     pos = pos + 1;
                     select(pos);
-                    check.setVisibility(view.VISIBLE);
-                    next.setVisibility(view.INVISIBLE);
-                    ans.setBackgroundColor(Color.WHITE);
+                    check.setEnabled(false);
+                    next.setEnabled(true);
+                   // ans.setBackgroundColor(Color.WHITE);
                     ans.setText("");
                     rb1.setChecked(false);
                     rb2.setChecked(false);

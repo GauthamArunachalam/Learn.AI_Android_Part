@@ -23,21 +23,26 @@
             </intent-filter>
         </activity>
         <activity android:name=".login"
-            android:theme="@style/AppTheme"/>
-        <activity android:name=".Home" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".GSignIn" />
+            android:theme="@style/AppTheme2"/>
+        <activity android:name=".Home"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name=".SignUp"
+            android:theme="@style/AppTheme2"/>
+        <activity android:name=".GSignIn"
+            android:theme="@style/AppTheme2"/>
         <activity
             android:name=".course"
             android:label="@string/title_activity_course"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme2" />
 
         <service
             android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
             android:enabled="true" />
 
-        <activity android:name=".pdfViewer" />
-        <activity android:name=".normalChat" />
+        <activity android:name=".pdfViewer"
+            android:theme="@style/Theme.AppCompat"/>
+        <activity android:name=".normalChat"
+            android:theme="@style/Theme.AppCompat"/>
         <activity android:name=".forum"></activity>
     </application>
 

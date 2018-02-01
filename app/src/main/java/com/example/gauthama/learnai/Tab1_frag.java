@@ -34,7 +34,7 @@ public class Tab1_frag extends Fragment {
 
     ImageView img;
     TextView name, dis;
-    Button vr, pdf, normal,forum;
+    TextView vr, pdf, normal,forum;
     File fileToDownload = new File("/storage/sdcard0/Trail/MY");
     AmazonS3 s3;
     TransferUtility transferUtility;
@@ -44,13 +44,13 @@ public class Tab1_frag extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab1_frag,container,false);
+        View view = inflater.inflate(R.layout.overview,container,false);
 
         img = (ImageView)view.findViewById(R.id.Pic);
         name = (TextView)view.findViewById(R.id.name);
-        vr = (Button)view.findViewById(R.id.vr);
-        pdf = (Button)view.findViewById(R.id.pdf);
-        normal = (Button)view.findViewById(R.id.normal);
+        vr = (TextView) view.findViewById(R.id.vr);
+        pdf = (TextView) view.findViewById(R.id.pdf);
+        normal = (TextView) view.findViewById(R.id.normal);
       //  forum = (Button)view.findViewById(R.id.forum);
 
 

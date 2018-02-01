@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amazonaws.auth.CognitoCachingCredentialsProvider;
@@ -47,7 +48,7 @@ public class addItem extends Fragment {
 
     EditText title, content;
     public static int ReqCode = 100;
-    Button submit;
+    TextView submit;
     CognitoCachingCredentialsProvider credentialsProvider;
     CognitoSyncManager syncManager;
     AmazonDynamoDBClient ddb;
@@ -60,7 +61,7 @@ public class addItem extends Fragment {
 
         title = (EditText)view.findViewById(R.id.title);
         content = (EditText)view.findViewById(R.id.con);
-        submit = (Button)view.findViewById(R.id.sumbit);
+        submit = (TextView) view.findViewById(R.id.sumbit);
 
         credentialsProvider = new CognitoCachingCredentialsProvider(
                 getContext(),

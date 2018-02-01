@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/quiz"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:background="@color/colorAccent"
-        android:text="Take Quiz" />
 
     <TextView
         android:id="@+id/questionTitle"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/quiz"
-        android:layout_marginTop="29dp"
+        android:layout_alignLeft="@+id/ans"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/ans"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="24dp"
+        android:padding="5dp"
         android:text="Question"
         android:textSize="25sp" />
+
+    <View
+        android:layout_width="200dp"
+        android:id="@+id/v1"
+        android:layout_height="1px"
+        android:layout_below="@+id/questionTitle"
+        android:layout_margin="5dp"
+        android:background="@color/gray"></View>
 
     <TextView
         android:id="@+id/question"
@@ -29,7 +33,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/questionTitle"
+        android:layout_margin="7dp"
+        android:padding="5dp"
         android:textSize="20sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/v2"
+        android:layout_below="@+id/question"
+        android:layout_margin="5dp"
+        android:background="@color/gray"></View>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,7 +50,8 @@
         android:orientation="horizontal"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,49 +88,105 @@
        </LinearLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginStart="22dp"
-        android:text="check" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/linearLayout2"
+        android:id="@+id/v3"
+        android:layout_margin="5dp"
+        android:background="@color/gray"></View>
 
-    <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/check"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_toEndOf="@+id/questionTitle"
-        android:layout_toRightOf="@+id/questionTitle"
-        android:text="next" />
 
     <TextView
         android:id="@+id/ans"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_above="@+id/check"
-        android:layout_alignEnd="@+id/check"
-        android:layout_alignRight="@+id/check"
-        android:gravity="center"
-        android:textSize="15sp"
-        android:layout_marginBottom="17dp" />
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="27dp"
 
-    <Button
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp"
-        android:text="Back"
-        android:layout_above="@+id/next"
-        android:layout_toRightOf="@+id/ans"
-        android:layout_toEndOf="@+id/ans" />
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="19sp"
+        android:textStyle="bold" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/ans"
+        android:id="@+id/v4"
+        android:layout_margin="5dp"
+        android:background="@color/gray"></View>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Back"
+            android:id="@+id/back"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:id="@+id/v5"
+            android:layout_margin="5dp"
+            android:background="@color/gray"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/check"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Check"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:id="@+id/v6"
+            android:layout_margin="5dp"
+            android:background="@color/gray"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/next"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Next"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/quiz"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/quiz"
+        android:layout_alignTop="@+id/question"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

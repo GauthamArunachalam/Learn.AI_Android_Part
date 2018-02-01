@@ -1,6 +1,7 @@
 package com.example.gauthama.learnai;
 
 import android.speech.tts.TextToSpeech;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,7 +27,8 @@ public class normalChat extends AppCompatActivity implements AIListener, TextToS
 
     TextView ques, res;
     TextToSpeech tts;
-    Button lis,speak;
+    TextView speak;
+    FloatingActionButton fab;
    // EditText textIn;
     AIService aiService;
 
@@ -37,13 +39,14 @@ public class normalChat extends AppCompatActivity implements AIListener, TextToS
 
         ques = (TextView)findViewById(R.id.question);
         res = (TextView)findViewById(R.id.result);
-        speak = (Button)findViewById(R.id.speak);
+        speak = (TextView) findViewById(R.id.Speak);
         tts = new TextToSpeech(this, this);
+        fab = (FloatingActionButton)findViewById(R.id.floatingActionButton2);
 //        textPro = (Button)findViewById(R.id.sendText);
 //        textIn = (EditText)findViewById(R.id.textInput);
 
 
-        lis = (Button)findViewById(R.id.lis);
+        //lis = (Button)findViewById(R.id.lis);
 
         final AIConfiguration config = new AIConfiguration("2c890cf705f14c859fcdb438300d88eb",
                 AIConfiguration.SupportedLanguages.English,
@@ -52,7 +55,7 @@ public class normalChat extends AppCompatActivity implements AIListener, TextToS
         aiService = AIService.getService(this, config);
         aiService.setListener(this);
 
-        speak.setOnClickListener(new View.OnClickListener() {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 speakOut();
